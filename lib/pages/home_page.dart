@@ -13,54 +13,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black54,
-        title: Text(
-          'Home Page',
-          style: TextStyle(color: Colors.white, fontSize: 20),
-        ),
-        centerTitle: true,
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.house))
-        ],
-      ),
-      body: Container(
-        padding: EdgeInsets.all(5.0),
-        child: Column(
-          children: [
-            Container(
-              color: Colors.black54,
-              child: Row(
-                children: [
-                  Image.network('https://picsum.photos/50'),
-                  const Text('Lorem lorem lorem lorem', style: TextStyle(color: Colors.white),)
-                ],
-              ),
-            ),
-            SizedBox(height: 5),
-            Container(
-              color: Colors.black54,
-              child: Row(
-                children: [
-                  Image.network('https://picsum.photos/50'),
-                  const Text('Lorem lorem lorem lorem', style: TextStyle(color: Colors.white),)
-                ],
-              ),
-            ),
-            SizedBox(height: 5),
-            Container(
-              color: Colors.black54,
-              child: Row(
-                children: [
-                  Image.network('https://picsum.photos/50'),
-                  const Text('Lorem lorem lorem lorem', style: TextStyle(color: Colors.white),)
-                ],
-              ),
-            ),
-          ],
-        )
-      ),
+      appBar: AppBar(title: Text('Furqat'), centerTitle: true,),
+      backgroundColor: Colors.lightBlue,
+      body: Row(
+        children: [
+          Expanded(child: Container(color: Colors.green,height: 50,margin: EdgeInsets.all(10.0),)),
+          Expanded(child: Container(color: Colors.green,height: 50,margin: EdgeInsets.all(10.0))),
+          Expanded(child: Container(color: Colors.green, height: 50,margin: EdgeInsets.all(10.0)))
+        ]
+      )
     );
   }
 }
