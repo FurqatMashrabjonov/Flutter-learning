@@ -15,11 +15,11 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(title: Text('Furqat'), centerTitle: true,),
       backgroundColor: Colors.lightBlue,
-      body: Row(
+      body: Column(
         children: [
-          Expanded(child: Container(color: Colors.green,height: 50,margin: EdgeInsets.all(10.0),)),
-          Expanded(child: Container(color: Colors.green,height: 50,margin: EdgeInsets.all(10.0))),
-          Expanded(child: Container(color: Colors.green, height: 50,margin: EdgeInsets.all(10.0)))
+          Container(color: Colors.green,height: 50,margin: EdgeInsets.all(10.0),),
+          Container(color: Colors.green,height: 50,margin: EdgeInsets.all(10.0)),
+         Container(color: Colors.green, height: 50,margin: EdgeInsets.all(10.0))
         ]
       )
     );
