@@ -16,28 +16,34 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text('Home Page'),
         ),
-        body: Center(
-          child: Text('Home Page'),
-        ),
-        drawer: Drawer(
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-              Container(
-                  padding: EdgeInsets.all(20),
-                  color: Colors.grey,
-                  height: 200,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('Fullname',
-                          style: TextStyle(color: Colors.white, fontSize: 20)),
-                      Text('fullname@gmail.com',
-                          style: TextStyle(color: Colors.white)),
-                    ],
-                  ))
-            ])));
+        body: ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            _itemList(title: "ItemOne", image: "assets/images/02.jpg"),
+            _itemList(title: "ItemOne", image: "assets/images/02.jpg"),
+            _itemList(title: "ItemOne", image: "assets/images/02.jpg"),
+            _itemList(title: "ItemOne", image: "assets/images/02.jpg"),
+          ],
+        ));
+  }
+
+  Widget _itemList({title, image}) {
+    return Container(
+        padding: EdgeInsets.all(20),
+        child: Row(
+          children: [
+            Image(
+              width: 70,
+              height: 70,
+              fit: BoxFit.cover,
+              image: AssetImage(image),
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Text(title)
+          ],
+        ));
   }
 }
 //https://picsum.photos/200
