@@ -13,16 +13,31 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Furqat'), centerTitle: true,),
-      backgroundColor: Colors.lightBlue,
-      body: Column(
-        children: [
-          Container(color: Colors.green,height: 50,margin: EdgeInsets.all(10.0),),
-          Container(color: Colors.green,height: 50,margin: EdgeInsets.all(10.0)),
-         Container(color: Colors.green, height: 50,margin: EdgeInsets.all(10.0))
-        ]
-      )
-    );
+        appBar: AppBar(
+          title: Text('Home Page'),
+        ),
+        body: Center(
+          child: Text('Home Page'),
+        ),
+        drawer: Drawer(
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+              Container(
+                  padding: EdgeInsets.all(20),
+                  color: Colors.grey,
+                  height: 200,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Fullname',
+                          style: TextStyle(color: Colors.white, fontSize: 20)),
+                      Text('fullname@gmail.com',
+                          style: TextStyle(color: Colors.white)),
+                    ],
+                  ))
+            ])));
   }
 }
 //https://picsum.photos/200
